@@ -1,5 +1,4 @@
-alert("Enter if you dare");
-alert("Do you think you can outsmart Madam Estelle?");
+
 
 // set Var alphabet options
 var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -40,15 +39,18 @@ document.onkeyup = function(event) {
 
     //if, if else or else can be used for W/L
     //use .innerhtml to change the HTML content of a <p> element with id="demo":
+    //added alerts for win/lose 
 	if (userGuess === computerGuess){
 		wins++;
 		document.querySelector("#wins").innerHTML = "Wins: " + wins;
-		restart();
+        restart();
+        alert("Ah so you have Psychic Abilities too?")
 	} 
 	else if (guessesLeft === 0) {
 		losses++;
 		document.querySelector("#lose").innerHTML = "Loses: " + losses;
-		restart();
+        restart();
+        alert("Better luck next time")
 	}
   };
 //restart option so that game will begin again 
