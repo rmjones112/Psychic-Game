@@ -1,4 +1,5 @@
 
+//set background color to pink
 document.body.style.backgroundColor = "#ffe6ff" 
   
 // set Var alphabet options
@@ -15,12 +16,14 @@ var allLetters = null;
 // picks number for comp , use math.floor 
 var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 
+//set a function to count #of guesses left 
 //The querySelector() method returns the first element that matches a specified CSS selector(s) in the document
 function countGuessesLeft() {
 	document.querySelector("#guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
 }
-
-function farUserGuesses() {
+ 
+//function to track users letter's selected
+function trackUserGuesses() {
 	document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letter.join(' ');
 }
 
@@ -36,7 +39,7 @@ document.onkeyup = function(event) {
 
 	letter.push(userGuess);
 	countGuessesLeft();
-	farUserGuesses();
+	trackUserGuesses();
 
     //if, if else or else can be used for W/L
     //use .innerhtml to change the HTML content of a <p> element with id="demo":
