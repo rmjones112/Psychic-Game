@@ -1,7 +1,7 @@
 
 
 // set Var alphabet options
-var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var alphabet= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 // Setting at zero 
 var wins = 0;
@@ -12,7 +12,7 @@ var allLetters = null;
 
 
 // picks number for comp , use math.floor 
-var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 //The querySelector() method returns the first element that matches a specified CSS selector(s) in the document
 function countGuessesLeft() {
@@ -57,5 +57,5 @@ document.onkeyup = function(event) {
   var restart = function() {
 	guessesLeft = 9;
 	letter = [];
-	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 }
